@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2016-12-3 15:08:11 by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="entity.Employee" table="T_EMPLOYEE">
+        <id name="id" type="int">
+            <column name="F_ID" />
+            <generator class="native" />
+        </id>
+        <property name="name" type="java.lang.String">
+            <column name="F_NAME" />
+        </property>
+        <property name="email" type="java.lang.String">
+            <column name="F_EMAIL" />
+        </property>
+        <property name="birth" type="java.util.Date">
+            <column name="F_BIRTH" />
+        </property>
+        <property name="createTime" type="java.util.Date">
+            <column name="F_CREATETIME" />
+        </property>
+        <many-to-one name="department" class="entity.Department">
+            <column name="F_DEPARTMENT" />
+        </many-to-one>
+    </class>
+</hibernate-mapping>
