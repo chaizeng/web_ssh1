@@ -8,7 +8,8 @@
 <title>Insert title here</title>
 </head>
 <body>
-
+    <s:debug></s:debug>
+    
     <h2 align="center">员工信息</h2>
     <s:if test="#request.employee == null || #request.employee.size() == 0">
     　　　　　　没有员工信息
